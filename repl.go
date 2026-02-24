@@ -101,5 +101,10 @@ func getCommands() map[string]cliCommand {
 			description: "Exit the Pokedex",
 			callback:    commandExit,
 		},
+		"save": {
+			name:        "save",
+			description: "Save the caught Pokemon",
+			callback:    saveCaughtPokemon,
+		},
 	}
 }
