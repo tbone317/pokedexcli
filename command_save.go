@@ -7,6 +7,12 @@ import (
 	"github.com/tbone317/pokedexcli/internal/pokeapi"
 )
 
+func clearCaughtPokemon(cfg *config, args ...string) error {
+	cfg.caughtPokemon = make(map[string]pokeapi.Pokemon)
+	saveCaughtPokemon(cfg)
+	return nil
+}
+
 func saveCaughtPokemon(cfg *config, args ...string) error {
 	f, err := os.Create("caught_pokemon.json")
 	if err != nil {

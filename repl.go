@@ -106,5 +106,10 @@ func getCommands() map[string]cliCommand {
 			description: "Save the caught Pokemon",
 			callback:    saveCaughtPokemon,
 		},
+		"clear": {
+			name:        "clear",
+			description: "Clear all caught Pokemon",
+			callback:    clearCaughtPokemon,
+		},
 	}
 }
